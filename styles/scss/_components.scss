@@ -1,0 +1,378 @@
+/* ===  HEADER === */
+
+header.sitepoint {
+  background: #333;
+  color: #ddd;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;;
+  .branding {
+    height: $line-height * 2;
+    margin: 0;
+    .branding-logo {
+      height: $line-height;
+      margin-top: 1rem;
+    }
+    .hamburger{
+      vertical-align: 0.6em;
+      margin-right: 2rem;
+    }
+  }
+
+  .col-3 {
+    padding: 0 0rem;
+  }
+  .dash-controls {
+    padding-top: 0.888889rem;
+  }
+}
+
+/* ===  NAVBAR === */
+
+nav.main {
+  background: #fff;
+  box-shadow: 0 .3rem .35rem rgba(0, 0, 0, .075);
+  .col {
+    padding: 0 .5rem 0;
+  }
+}
+
+.navbar {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  line-height: 1.7777778rem;
+  li {
+    display: inline-block;
+    font-size: .85rem;
+    padding: 0 1rem;
+    a{
+      color: #777;
+    }
+    .note {
+      background: #b00;
+      display: inline-block;
+      color:#eee;
+      font-size: .5rem;  
+      padding: 0 0.27rem;
+      border-radius: 50%; 
+      line-height: .85rem;
+      margin-left: .5rem;
+      top: -0.15rem;
+      position: relative;
+    }
+  }
+}
+
+/* ===  BOOKTITLE === */
+
+section.titling {
+  padding-top: 1.7777778rem * 2.5;
+  letter-spacing: .05rem
+}
+
+h1.book-title {
+  color: #003
+}
+
+p.book-breadcrumbs {
+  margin: 1.7777778rem 0 -1.7777778rem;
+  font-size: .75rem;
+  color: $textgray;
+}
+
+p.book-author {
+  margin: -0.8888889rem*3 0 0.0rem;
+  font-size: .75rem;
+  color: $textgray;
+}
+
+/* ===  HERO === */
+
+section.hero {
+  height: 7*1.7777778rem;
+  background-color: rgb(38, 38, 38);
+  background-image: url("https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2016/11/14788516501466142151pattern-final-copy.png"), linear-gradient(165deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 65%, rgba(38, 38, 38, 0.3) 65.1%, rgba(38, 38, 38, 0.3));
+}
+
+.heroPitch {
+  color: #fff;
+  line-height: 2.6666667rem
+}
+
+/* ===  PRODUCT & SPECS === */
+
+.book {
+  top: -2rem; // positioning the book model up higher in the page.
+  margin-bottom: -3rem;
+  left: 5rem;
+}
+
+.course {
+  top: -2rem; // positioning the course preview up higher in the page.
+  margin-bottom: -3rem;
+  left: 5rem;
+  .cover {
+    border: 10px solid #333;
+    position: relative;
+    &:before {
+      display: block;
+      position: absolute;
+      content: '';
+      width: 30%;
+      height: 50%;
+      left: 50%;
+      top: 50%;
+      z-index: 9999;
+      margin: -15% -15%;
+      background-image: url(/~awalker/images/loop2.svg);
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.test {
+  -webkit-animation: test 3s;
+  animation: test 3s;
+}
+
+ul.specs {
+  padding: 0;
+  list-style-type: none;
+  margin: 4*1.7777778rem 10% 0;
+  box-shadow: .1rem .1rem 1rem rgba(38, 38, 38, 0.2);
+  li.icon {
+    border: 1px solid #CFCFCF;
+    background: #fff;
+    position: relative;
+    line-height: 2.6666667rem;
+    margin-bottom: -1px;
+    padding-left: 2rem;
+    z-index: 1;
+    i,
+    svg {
+      margin-right: .88888889rem;
+    }
+  }
+}
+
+/* ===  WHO? === */
+
+section.whoisthisfor {
+  background: #f3f3f3; //padding: 1.7777778rem 0;
+  h2 {
+    text-align: left;
+  }
+  div {
+    text-align: center;
+    img {
+      width: 46.5%;
+      margin: 0 0 -1.7777778rem;
+    }
+    p{
+      font-size: .75rem;
+      line-height: 0.8888889rem
+    }
+  }
+}
+
+/* ===  WHAT YOU'LL LEARN === */
+
+section.authors {
+  background: #f6f6f6;
+}
+
+.blurb h4 {
+  font-weight: 600;
+}
+
+.blurb h5 {
+  margin: 0 0 0 0;
+  color: #999
+}
+
+.blurb p {
+  font-size: 0.85rem;
+}
+
+/* ===  AUTHOR/TEACHER === */
+
+.author-avatar {
+  text-align: center;
+  margin-top: 3.5rem;
+  img {
+    border-radius: 50%;
+    width: 50%;
+  }
+}
+
+.authors {
+  .fa-2x {
+    color: #ddd;
+    &:hover {
+      color: #bbb;
+    }
+  }
+}
+
+.author-specs {
+  list-style: none;
+  padding: 0;
+  li {
+    margin-left: 30%;
+    font-size: .75rem;
+  }
+  i,
+  svg {
+    font-size: .75rem;
+    line-height: 2rem;
+    color: #999;
+  }
+}
+
+/* ===  FEEDBACK === */
+
+.feedback-avatar {
+  border-radius: 50%;
+  width: 5vw;
+  height: 5vw;
+  border: 1px #ccc solid
+}
+.rating-box{
+  text-align: center;
+  padding: 0.888889rem 0;
+  i,
+  svg {
+    //font-size: .75rem;
+    color: #ffcc00;
+  }
+}
+
+
+
+.review {
+  padding: 0.888889rem 0;
+  background: #f6f6f6;
+  border-radius: 3px;
+  text-align: left;
+  line-height: 1.777778rem;
+  color: #664;
+  box-shadow: 2px 2px 4px rgba(38, 38, 38, 0.1);
+  position: relative;
+  margin-bottom: 1.777778rem;
+  p {
+    font-size: .75rem;
+    margin: 0 1rem;
+    //outline: 1px green dashed;
+    &.avatar {
+      text-align: right;
+      font-size: .6rem;
+      padding-right: 3.5rem;
+      margin: 0.888889rem 0 -1rem;
+      //outline: 1px red dashed;
+      img {
+        position: absolute;
+        bottom: -0.5rem;
+        right: 1rem;
+        z-index: 0;
+        width: 2.0rem;
+        border-radius: 50%;
+        border: 2px solid #fff;
+      }
+    }
+  }
+}
+.avrating{
+  text-align: center;
+  margin: 1.77777778rem 0 ;
+  position: relative;
+  font-size: 3.555557rem;
+
+}
+
+.large{
+  font-size: 1.5rem;
+  text-align: right;
+  .col-5, .col-7{
+    padding-bottom: 0
+  }
+  .rating-box{
+    text-align: left;
+    padding: 1.7777778rem 0 0.8888889rem
+  }
+}
+
+
+.Breakdown {
+  display: block;
+  height: 1.7777778rem;
+  margin: 0 2rem;
+}
+
+.Breakdown_bg {
+  border-radius: 100px;
+  background: #efefef;
+  min-width: 80%;
+  margin: 8px 13px;
+  overflow: hidden;
+}
+
+.Breakdown_bg,
+.Breakdown_count,
+.Breakdown_label {
+  float: left;
+  font-size: 14px;
+}
+
+.Breakdown_count {
+  text-align: right;
+}
+
+.Breakdown_fill {
+  background: #3ec9cb;
+  height: 16px;
+  border-radius: 100px;
+}
+
+.Breakdown_label {
+  text-align: left;
+  text-transform: uppercase;
+}
+
+/* ===  OUTLINE === */
+.outline {
+  background: #fafafa
+}
+.outline table {
+  font-size: .75rem;
+  width: 100%;
+  tr.disabled{
+    color:#999;
+  }
+  td{
+    line-height: 1.6rem;
+
+  }
+  td:nth-of-type(1){
+    padding: 0 1rem 0;
+    //width: 3rem;
+  }
+}
+
+/* ===  FOOTER === */
+
+footer.mainfooter {
+  background: #3D383E;
+  //height: 12rem;
+  font-weight: #333;
+  padding: 1.7777778rem 0 1.7777778rem 0;
+  font-size: .75rem;
+  color: #ccc;
+  ul li a{
+    color: #ddd;
+  }
+}
