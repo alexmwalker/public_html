@@ -1,100 +1,12 @@
+@import 'config';
 
-
-//@import 'variables';
-
-$basefontsize:  12px;
-$basefontsize1: 14px;
-$basefontsize2: 16px;
-$basefontsize3: 18px;
-$basefontsize4: 20px;
-
-$line-height: 1.7777778rem;
-
-$textcolor: #333;
-$textgray: #828282;
-
-@import 'layout'; // Gridelex - http://gridlex.devlint.fr/
-
-html{
-  font-size: $basefontsize;
-  line-height: $line-height;
-  font-family: 'Roboto', sans-serif;
-}
-body {
-  font-family: sans-serif;
-  font-size: 1rem;
-  line-height: $line-height;
-  margin: auto;
-  color: $textcolor; 
-}
-
-@media screen and (min-width: 36rem){
-  html {
-    font-size: $basefontsize1;
-    body.labelling:before{
-      content: 'tablet';
-      background: green;
-    }
-  }
-}
-@media screen and (min-width: 48em)	{
-  html {
-    font-size: $basefontsize2;
-    body.labelling:before{
-      content: 'laptop';
-      background: gray;
-    }
-  }
-}
-@media screen and (min-width: 64em)	{
-  html {
-    font-size: $basefontsize3;
-    body.labelling:before{
-      content: 'desktop';
-      background: blueviolet;
-    }
-  }
-}
-
-@media screen and (min-width: 80em) {
-  html {
-    font-size: $basefontsize4;
-    body.labelling:before{
-      content: 'wide-monitor';
-      background: navy;
-    }
-  }
-}
-
-[class*=col-], [class*=col_], [class~=col] {
-  padding: 0 .5rem $line-height/2;
-  max-width: 100%;
-}
-
-.container{
-  max-width: 60rem;
-  margin: 0 auto;
-  padding: 0 1rem;
-  outline-color: rgba(0,0,255,0.5)
-}
-
-.center-text{
-  text-align: center;
-}
-.left-text{
-  text-align: left;
-}
-.right-text{
-  text-align: right;
-}
-.vertical-1{
-  padding: 0.888889rem 0
-}
 
 @import 'typography';
 @import 'atoms';
+@import 'header';
 @import 'components';
+@import 'footer';
 @import '3d';
-@import 'behavior'; 
-@import 'modal-block'; 
+@import 'behavior';
+@import 'modal-block';
 @import 'under-construction';

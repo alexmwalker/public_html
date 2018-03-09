@@ -1,0 +1,73 @@
+
+
+@import 'config';
+
+
+@import 'typography';
+@import 'atoms';
+@import 'header';
+@import 'checkout-components';
+@import 'footer';
+@import '3d';
+@import 'under-construction';
+
+
+
+/* my additions */
+
+.checkout {
+  background: #f3f4f2;
+}
+
+.underline {
+  //border-bottom: 1px solid #ddd;
+}
+
+.overline {
+  border-top: 1px solid #ccc;
+}
+.t-bg-grey-200 {
+  background-color: rgb(229, 229, 229);
+}
+
+.l-pa3 {
+  padding: 16px;
+}
+.t-bg-white {
+  background-color: rgb(255, 255, 255);
+}
+.l-w-100 {
+  width: 100%;
+}
+
+.Form_p {
+  font-size: .6rem;
+  line-height: 1rem;
+}
+
+
+
+.book.size-mid {
+  height: 18rem;
+  width: 14.3rem;
+  -webkit-perspective: 62.5rem;
+  perspective: 62.5rem;
+}
+
+.priceline{
+  color: #46C9CA;
+  font-size: 2rem;
+  text-align: right;
+  border: 1px #ccc solid;
+  border-width: 1px 0;
+  div[class^="col-"] {
+    padding-top: 0.888889rem
+  }
+  .price {
+    font-weight: 600
+  }
+}
+
+.book {
+  margin: 2em 0;
+}

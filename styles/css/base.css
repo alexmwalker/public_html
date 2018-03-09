@@ -978,33 +978,23 @@ body {
 
 @media screen and (min-width: 36rem) {
   html {
-    font-size: 14px; }
-    html body.labelling:before {
-      content: 'tablet';
-      background: green; } }
+    font-size: 14px; } }
 
 @media screen and (min-width: 48em) {
   html {
-    font-size: 16px; }
-    html body.labelling:before {
-      content: 'laptop';
-      background: gray; } }
+    font-size: 16px; } }
 
 @media screen and (min-width: 64em) {
   html {
-    font-size: 18px; }
-    html body.labelling:before {
-      content: 'desktop';
-      background: blueviolet; } }
+    font-size: 18px; } }
 
 @media screen and (min-width: 80em) {
   html {
-    font-size: 20px; }
-    html body.labelling:before {
-      content: 'wide-monitor';
-      background: navy; } }
+    font-size: 18px; } }
 
-[class*=col-], [class*=col_], [class~=col] {
+[class*=col-],
+[class*=col_],
+[class~=col] {
   padding: 0 0.5rem 0.88889rem;
   max-width: 100%; }
 
@@ -1476,33 +1466,33 @@ $aspect-ratio is either 7:9 (.76) or 8:10 (.8) ratio for all SitePoint books and
       width: 1.2rem; }
 
 .book.size-large {
-  height: 35em;
-  width: 28em;
-  -webkit-perspective: 148.75em;
-  perspective: 148.75em; }
+  height: 35rem;
+  width: 28rem;
+  -webkit-perspective: 148.75rem;
+  perspective: 148.75rem; }
   .book.size-large .backcover {
-    -webkit-transform: rotateY(180deg) translateZ(2.1em);
-    transform: rotateY(180deg) translateZ(2.1em); }
+    -webkit-transform: rotateY(180deg) translateZ(2.1rem);
+    transform: rotateY(180deg) translateZ(2.1rem); }
     .book.size-large .backcover:before, .book.size-large .backcover:after {
-      width: 2.1em; }
+      width: 2.1rem; }
 
 .book.size-large.chunky .backcover {
-  -webkit-transform: rotateY(180deg) translateZ(2.8em);
-  transform: rotateY(180deg) translateZ(2.8em); }
+  -webkit-transform: rotateY(180deg) translateZ(3.15rem);
+  transform: rotateY(180deg) translateZ(3.15rem); }
   .book.size-large.chunky .backcover:before, .book.size-large.chunky .backcover:after {
-    width: 2.8em; }
+    width: 3.15rem; }
 
 .book.size-small.chunky .backcover {
-  -webkit-transform: rotateY(180deg) translateZ(2.8em);
-  transform: rotateY(180deg) translateZ(2.8em); }
+  -webkit-transform: rotateY(180deg) translateZ(0.9rem);
+  transform: rotateY(180deg) translateZ(0.9rem); }
   .book.size-small.chunky .backcover:before, .book.size-small.chunky .backcover:after {
-    width: 2.8em; }
+    width: 0.9rem; }
 
 .book.size-mid.chunky .backcover {
-  -webkit-transform: rotateY(180deg) translateZ(2.8em);
-  transform: rotateY(180deg) translateZ(2.8em); }
+  -webkit-transform: rotateY(180deg) translateZ(1.8rem);
+  transform: rotateY(180deg) translateZ(1.8rem); }
   .book.size-mid.chunky .backcover:before, .book.size-mid.chunky .backcover:after {
-    width: 2.8em; }
+    width: 1.8rem; }
 
 .book {
   margin: 2em;
@@ -2080,7 +2070,7 @@ body.labelling:before {
   position: fixed;
   content: 'default';
   text-align: center;
-  z-index: 99;
+  z-index: 9999;
   width: 4rem;
   right: 3rem;
   height: .8rem;
@@ -2163,5 +2153,30 @@ body.labelling:before {
 
 .labelling li:after {
   content: "<li>"; }
+
+/*  === MEDIA QUERY LABELS ===  */
+html body.labelling:before {
+  content: 'default';
+  background: goldenrod; }
+
+@media screen and (min-width: 36rem) {
+  html body.labelling:before {
+    content: 'tablet';
+    background: green; } }
+
+@media screen and (min-width: 48em) {
+  html body.labelling:before {
+    content: 'laptop';
+    background: gray; } }
+
+@media screen and (min-width: 64em) {
+  html body.labelling:before {
+    content: 'desktop';
+    background: blueviolet; } }
+
+@media screen and (min-width: 80em) {
+  html body.labelling:before {
+    content: 'wide-monitor';
+    background: #3737f7; } }
 
 /*# sourceMappingURL=base.css.map */

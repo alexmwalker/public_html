@@ -68,7 +68,7 @@ body.labelling:before {
   position: fixed;
   content: 'default';
   text-align: center;
-  z-index: 99;
+  z-index: 9999;
   width: 4rem;
   right: 3rem;
   height: .8rem;
@@ -169,4 +169,36 @@ body.labelling:before {
 
 .labelling li:after {
   content: "<li>";
+}
+
+/*  === MEDIA QUERY LABELS ===  */ 
+
+html body.labelling:before{
+  content: 'default';
+  background: goldenrod;
+}
+
+@media screen and (min-width: $breakpoint-tablet){
+  html body.labelling:before{
+      content: 'tablet';
+      background: green;
+  }
+}
+@media screen and (min-width: $breakpoint-laptop)	{
+  html body.labelling:before{
+      content: 'laptop';
+      background: gray;
+  }
+}
+@media screen and (min-width: 64em)	{
+  html body.labelling:before{
+      content: 'desktop';
+      background: blueviolet;
+  }
+}
+@media screen and (min-width: 80em) {
+  html body.labelling:before{
+      content: 'wide-monitor';
+      background: rgb(55, 55, 247);
+  }
 }

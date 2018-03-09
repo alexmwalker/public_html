@@ -1,0 +1,11 @@
+/* ===  FOOTER === */
+footer.mainfooter {
+  background: #3D383E;
+  font-weight: #333;
+  padding: 1.7777778rem 0 1.7777778rem 0;
+  font-size: .75rem;
+  color: #ccc; }
+  footer.mainfooter ul li a {
+    color: #ddd; }
+
+/*# sourceMappingURL=_footer.css.map */

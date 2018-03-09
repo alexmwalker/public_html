@@ -1,0 +1,65 @@
+/* ===  HEADER === */
+
+header.sitepoint {
+  background: #333;
+  color: #ddd;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;;
+  .branding {
+    height: $line-height * 2;
+    margin: 0;
+    .branding-logo {
+      height: $line-height;
+      margin-top: 1rem;
+    }
+    .hamburger{
+      vertical-align: 0.6em;
+      margin-right: 2rem;
+    }
+  }
+
+  .col-3 {
+    padding: 0 0rem;
+  }
+  .dash-controls {
+    padding-top: 0.888889rem;
+  }
+}
+
+/* ===  NAVBAR === */
+
+nav.main {
+  background: #fff;
+  box-shadow: 0 .3rem .35rem rgba(0, 0, 0, .075);
+  .col {
+    padding: 0 .5rem 0;
+  }
+}
+
+.navbar {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  line-height: 1.7777778rem;
+  li {
+    display: inline-block;
+    font-size: .85rem;
+    padding: 0 1rem;
+    a{
+      color: #777;
+    }
+    .note {
+      background: #b00;
+      display: inline-block;
+      color:#eee;
+      font-size: .5rem;  
+      padding: 0 0.27rem;
+      border-radius: 50%; 
+      line-height: .85rem;
+      margin-left: .5rem;
+      top: -0.15rem;
+      position: relative;
+    }
+  }
+}

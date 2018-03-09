@@ -35,7 +35,7 @@ $aspect-ratio is either 7:9 (.76) or 8:10 (.8) ratio for all SitePoint books and
 $aspect-ratio:       7/9.15; //width vs height
 $aspect-ratio:       8/10;
 $spine-ratio:        0.06; // standard width book spines
-$spine-ratio-chunky: 0.08; // for books with fatter spines
+$spine-ratio-chunky: 0.09; // for books with fatter spines
 $book-perspective:   4.25;  // Lower numbers make appearance more 'warped' by perspective. 
 
 /* -- Spin speed -- */
@@ -49,7 +49,7 @@ $spin-speed: 12s;
 
 $height-small: 10rem;
 $height-mid:   20rem;
-$height-large: 35em;
+$height-large: 35rem;
 
 /* HEIGHTS  */
 
@@ -96,7 +96,7 @@ $spine-large-chunky: $height-large * $spine-ratio-chunky;
     }
   }
 }
-
+ 
 .book.size-large {
   height: $height-large;
   width: $width-large;
@@ -123,20 +123,20 @@ $spine-large-chunky: $height-large * $spine-ratio-chunky;
 // adjustments for wider spine (class .chunky)
 .book.size-small.chunky {
   .backcover {
-    transform: rotateY(180deg) translateZ($spine-large-chunky);
+    transform: rotateY(180deg) translateZ($spine-small-chunky);
     &:before,
     &:after {
-      width: $spine-large-chunky;
+      width: $spine-small-chunky;
     }
   }
 }
 // adjustments for wider spine (class .chunky)
 .book.size-mid.chunky {
   .backcover {
-    transform: rotateY(180deg) translateZ($spine-large-chunky);
+    transform: rotateY(180deg) translateZ($spine-mid-chunky);
     &:before,
     &:after {
-      width: $spine-large-chunky;
+      width: $spine-mid-chunky;
     }
   }
 }

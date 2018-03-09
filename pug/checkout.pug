@@ -8,24 +8,41 @@ head
   // The Grid system
   link(rel="stylesheet" type="test/css" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,600,700")
   // Font
-  link(rel="stylesheet" type="text/css" href="styles/css/base.css")
+  link(rel="stylesheet" type="text/css" href="styles/css/checkout.css")
   
-body.borders.-labelling.-vertical-rhythm
+  
+body.-borders.-labelling.-vertical-rhythm
 
   include header.pug
   
-  section.name
+  section.checkout
     .container
       .grid-12
         .col-8
-          h3 col 6
+          h2 Get Instant Premium Access for $9
+          .grid-12.overline
+            .col-5
+              .book.view3d.size-mid.chunky.oclock-10
+                .cover
+                  img(src="https://raw.githubusercontent.com/sitepoint/Complete-Cover-Archive/New-UX-books/games1/9780994182616-Perfect-html5-games-small.png" alt="Book cover: HTML5 Games")
+            .col-7
+              h5 Premium Membership includes instant access to:
+              ul
+                li HTML5 Games: Novice to Ninja (PDF &amp; ePub)
+                li 70+ SitePoint Books
+                li 80+ Premium Video Courses
+              
+              .grid-12.priceline
+                .col-8
+                  span.price
+                    strike $15 
+                .col-3
+                  span.price
+                    | $9
+              .col
+                small Discount applied. Expires in 24 hours
         .col-4
-          h3 col 6          
-
-
-
-
-
-
+          include checkout-form.pug
 
   include footer.pug
+  include scripts.pug
