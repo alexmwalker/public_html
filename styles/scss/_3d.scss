@@ -12,7 +12,7 @@ https://cdn.rawgit.com/alexmwalker/view3d/master/js/scripts.js
 */
 
 @mixin makemearealboy {
-  // re-usable to set up :before :after pseudo elements
+  // re-usable mixin to set up :before :after pseudo elements
   display: block;
   content: '';
   position: absolute;
@@ -33,7 +33,7 @@ $lighting-effect: linear-gradient(100deg, rgba(255,255,255,0) 0%, rgba(255,255,2
 $aspect-ratio is either 7:9 (.76) or 8:10 (.8) ratio for all SitePoint books and shouldn't change unless the book format changes. */
 
 $aspect-ratio:       7/9.15; //width vs height
-$aspect-ratio:       8/10;
+$aspect8-10:         8/10; // alternate aspect ratio
 $spine-ratio:        0.06; // standard width book spines
 $spine-ratio-chunky: 0.09; // for books with fatter spines
 $book-perspective:   4.25;  // Lower numbers make appearance more 'warped' by perspective. 
@@ -45,31 +45,53 @@ $spin-speed: 12s;
 /* -- Preset Book Display Sizes -- */
 
 
-/* WIDTHS  */
-
-$height-small: 10rem;
-$height-mid:   20rem;
-$height-large: 35rem;
-
 /* HEIGHTS  */
+$height-thumbnail: 8em;
+$height-small:     10em;
+$height-mid:       20rem;
+$height-large:     35rem;
 
-$width-small: $height-small * $aspect-ratio;
-$width-mid:   $height-mid   * $aspect-ratio;
-$width-large: $height-large * $aspect-ratio;
+/* WIDTHS  */
+$width-thumbnail: $height-thumbnail * $aspect-ratio;
+$width-small:     $height-small * $aspect-ratio;
+$width-mid:       $height-mid   * $aspect-ratio;
+$width-large:     $height-large * $aspect-ratio;
+
+/* WIDTHS with alternate aspect ratio (8/10)  */
+$width-thumbnail-8-10: $height-thumbnail * $aspect8-10;
+$width-small-8-10:     $height-small * $aspect8-10;
+$width-mid-8-10:       $height-mid   * $aspect8-10;
+$width-large-8-10:     $height-large * $aspect8-10;
 
 /* SPINES  */
-
-$spine-small: $height-small * $spine-ratio;
-$spine-mid:   $height-mid   * $spine-ratio;
-$spine-large: $height-large * $spine-ratio;
+$spine-thumbnail: $height-thumbnail * $spine-ratio;
+$spine-small:     $height-small * $spine-ratio;
+$spine-mid:       $height-mid   * $spine-ratio;
+$spine-large:     $height-large * $spine-ratio;
 
 /* CHUNKY SPINES */
-
+$spine-thumbnail-chunky: $height-thumbnail * $spine-ratio-chunky;
 $spine-small-chunky: $height-small * $spine-ratio-chunky;
 $spine-mid-chunky:   $height-mid   * $spine-ratio-chunky;
 $spine-large-chunky: $height-large * $spine-ratio-chunky;
 
 /* Calculate other book dimensions */
+
+.book.size-thumbnail {
+  height: $height-thumbnail;
+  width: $width-thumbnail;
+  perspective: $height-thumbnail * $book-perspective;
+  .backcover {
+    transform: rotateY(180deg) translateZ($spine-thumbnail);
+    &:before,
+    &:after {
+      width: $spine-thumbnail;
+    }
+  }
+}
+.book.size-thumbnail.aspect8-10 { /* width adjustments for 8" x 10" books - most are 7 x 9 */ 
+  width: $width-thumbnail-8-10;
+}
 
 .book.size-small {
   height: $height-small;
@@ -83,7 +105,9 @@ $spine-large-chunky: $height-large * $spine-ratio-chunky;
     }
   }
 }
-
+.book.size-small.aspect8-10 { /* width adjustments for 8" x 10" books - most are 7 x 9 */ 
+  width: $width-small-8-10;
+}
 .book.size-mid {
   height: $height-mid;
   width: $width-mid;
@@ -96,7 +120,9 @@ $spine-large-chunky: $height-large * $spine-ratio-chunky;
     }
   }
 }
- 
+.book.size-mid.aspect8-10 { /* width adjustments for 8" x 10" books - most are 7 x 9 */ 
+  width: $width-mid-8-10;
+}
 .book.size-large {
   height: $height-large;
   width: $width-large;
@@ -109,17 +135,21 @@ $spine-large-chunky: $height-large * $spine-ratio-chunky;
     }
   }
 }
-
-// adjustments for wider spine (class .chunky)
-.book.size-large.chunky {
+.book.size-large.aspect8-10 { /* width adjustments for 8" x 10" books - most are 7 x 9 */ 
+  width: $width-large-8-10;
+}
+// SPINE: adjustments for wider spine (class .chunky)
+.book.size-thumbnail.chunky {
   .backcover {
-    transform: rotateY(180deg) translateZ($spine-large-chunky);
+    transform: rotateY(180deg) translateZ($spine-thumbnail-chunky);
     &:before,
     &:after {
-      width: $spine-large-chunky;
+      width: $spine-thumbnail-chunky;
     }
   }
 }
+
+
 // adjustments for wider spine (class .chunky)
 .book.size-small.chunky {
   .backcover {
@@ -140,12 +170,29 @@ $spine-large-chunky: $height-large * $spine-ratio-chunky;
     }
   }
 }
-
+// adjustments for wider spine (class .chunky)
+.book.size-large.chunky {
+  .backcover {
+    transform: rotateY(180deg) translateZ($spine-large-chunky);
+    &:before,
+    &:after {
+      width: $spine-large-chunky;
+    }
+  }
+}
 
 .book {
   // book container
-  margin: 2em;
+  margin: 0 auto;
   position: relative;
+  perspective-origin: 50% 50%; //  looking at the model from eye-level (the default)
+}
+
+.highview{
+  perspective-origin: 0% 0; //  looking down at the model from slightly above 
+}
+.lowview{
+  perspective-origin: 100% 0; //  looking up at the model from slightly below 
 }
 
 
@@ -215,11 +262,10 @@ $spine-large-chunky: $height-large * $spine-ratio-chunky;
 }
 
 .backcover {
-  // Generated JS : Div containing current cover of BG
+  // Generated via JS : Div containing current cover of BG
   transform-style: preserve-3d;
   height: 100%;
   width: 100%;
-  background: red, red;
   background-size: 500% 200%, auto 100%;  
   background-position: -200% 100%, left top ;
   position: absolute;

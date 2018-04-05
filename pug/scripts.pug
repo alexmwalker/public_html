@@ -1,30 +1,56 @@
 
 script(src="https://cdn.rawgit.com/alexmwalker/view3d/master/js/scripts.js")
 script(src="https://use.fontawesome.com/releases/v5.0.6/js/all.js")
+script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+script(src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css")
+script(src="js/hopscotch.js")
+
 script.
-  var scrollpos = window.scrollY;
-  var grabProduct = document.querySelector('div#pinit');
-  var bookMatch = document.querySelector('div.book');
-  function add_class_on_scroll() {
-  grabProduct.classList.add("pin-it");
-  bookMatch.classList.add("oclock-spin");
-  bookMatch.classList.remove("oclock-1");
-  bookMatch.classList.remove("size-mid");
-  bookMatch.classList.add("size-small");
-  }
-  function remove_class_on_scroll() {
-  grabProduct.classList.remove("pin-it");
-  bookMatch.classList.add("oclock-1");
-  bookMatch.classList.remove("oclock-spin");
-  bookMatch.classList.remove("size-small");
-  bookMatch.classList.add("size-mid");
-  }
-  window.addEventListener('scroll', function () {
-  scrollpos = window.scrollY;
-  if (scrollpos > 220) {
-  add_class_on_scroll();
-  } else {
-  remove_class_on_scroll();
-  }
-  //console.log(scrollpos);
+
+  /*  === remembering the last book visited === */
+
+  /* set it */
+  $('#set').click(function() { // when you click #set...
+    var test = $('#text').val();  // grab the value of input#text (a hidden INPUT value)
+    localStorage.setItem("lastSeen", test); // and write it into a cookie called 'lastSeen'
   });
+
+
+
+
+
+
+  /* get it */
+  $('#get').click(function() {
+    $('#val').text(localStorage.getItem("lastSeen"));
+  });
+
+  /* remove it */
+  $('#remove').click(function() {
+    localStorage.removeItem("lastSeen");
+  });
+
+  $('#val').text(localStorage.getItem("lastSeen"));
+
+
+  // Define the tour!
+    var tour = {
+      id: "library-tour",
+      steps: [
+        {
+          title: "My Header",
+          content: "This is the header of my page.",
+          target: "header",
+          placement: "right"
+        },
+        {
+          title: "My content",
+          content: "Here is where I put my content.",
+          target: document.querySelector("#content p"),
+          placement: "bottom"
+        }
+      ]
+    };
+
+    // Start the tour!
+    hopscotch.startTour(library-tour);

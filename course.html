@@ -110,19 +110,19 @@
         <div class="col-12">
           <h2>Who should take this course?</h2>
         </div>
-        <div class="col-3"><img src="https://cdn.rawgit.com/alexmwalker/Complete-Cover-Archive/23a9c2c3/misc/daphne.svg.svg">
+        <div class="col-3_sm-6"><img src="images/SVG/head1.svg">
           <h4>Frontend Devs</h4>
           <p>…who want to write high quality, fast-running code.</p>
         </div>
-        <div class="col-3"><img src="https://cdn.rawgit.com/alexmwalker/Complete-Cover-Archive/6a8d260d/misc/dan.svg.svg">
+        <div class="col-3_sm-6"><img src="images/SVG/head6.svg">
           <h4>Project Managers</h4>
           <p>…who need to lead their teams to building better products.</p>
         </div>
-        <div class="col-3"><img src="https://cdn.rawgit.com/alexmwalker/Complete-Cover-Archive/6a8d260d/misc/janice.svg.svg">
+        <div class="col-3_sm-6"><img src="images/SVG/head12.svg">
           <h4>Marketers</h4>
           <p>…who want to decrease drop-offs and increase conversions.</p>
         </div>
-        <div class="col-3"><img src="https://cdn.rawgit.com/alexmwalker/Complete-Cover-Archive/6a8d260d/misc/hector.svg.svg">
+        <div class="col-3_sm-6"><img src="images/SVG/head8.svg">
           <h4>Designers</h4>
           <p>…who want to know how to avoid problems at the design stage.</p>
         </div>
@@ -185,7 +185,7 @@
   <section class="authors">
     <div class="container">
       <div class="grid-center grid-middle">
-        <div class="col-1"><a href="#"><i class="fas fa-2x fa-chevron-circle-left"></i></a></div>
+        <div class="col-1 text-center"><a href="#"><i class="fas fa-2x fa-chevron-circle-left"></i></a></div>
         <div class="col-5">
           <h2>Your Instructor</h2>
           <h4>Mark Price</h4>
@@ -208,7 +208,7 @@
             <li><i class="fab fa-facebook-f"></i>devslopes</li>
           </ul>
         </div>
-        <div class="col-1"><a href="#"><i class="fas fa-2x fa-chevron-circle-right"></i></a></div>
+        <div class="col-1 text-center"><a href="#"><i class="fas fa-2x fa-chevron-circle-right"></i></a></div>
       </div>
     </div>
   </section>
@@ -544,6 +544,9 @@
   </div>
   <script src="https://cdn.rawgit.com/alexmwalker/view3d/master/js/scripts.js"></script>
   <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css"></script>
+  <script src="js/hopscotch.js"></script>
   <script>
     var scrollpos = window.scrollY;
     var grabProduct = document.querySelector('div#pinit');
@@ -571,5 +574,53 @@
     }
     //console.log(scrollpos);
     });
+    
+    /*  === remembering the last book visited === */
+    
+    /* set it */
+    $('#set').click(function() { // when you click #set...
+      var test = $('#text').val();  // grab the value of input#text (a hidden INPUT value)
+      localStorage.setItem("lastSeen", test); // and write it into a cookie called 'lastSeen'
+    });
+    
+    
+    
+    
+    
+    
+    /* get it */
+    $('#get').click(function() {
+      $('#val').text(localStorage.getItem("lastSeen"));
+    });
+    
+    /* remove it */
+    $('#remove').click(function() {
+      localStorage.removeItem("lastSeen");
+    });
+    
+    $('#val').text(localStorage.getItem("lastSeen"));
+    
+    
+    // Define the tour!
+      var tour = {
+        id: "library-tour",
+        steps: [
+          {
+            title: "My Header",
+            content: "This is the header of my page.",
+            target: "header",
+            placement: "right"
+          },
+          {
+            title: "My content",
+            content: "Here is where I put my content.",
+            target: document.querySelector("#content p"),
+            placement: "bottom"
+          }
+        ]
+      };
+    
+      // Start the tour!
+      hopscotch.startTour(library-tour);
   </script>
 </body>

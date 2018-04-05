@@ -6,20 +6,20 @@ h1,
 {
     font-size: 2.2222222rem;
     font-weight: 500;
-    line-height: 3.5555556rem;
+    line-height: $line-height * 2;
 
-    margin-top: 1.7777778rem;
-    margin-bottom: 1.7777778rem;
+    margin-top: $line-height;
+    margin-bottom: $line-height;
 }
 h2,
 .is-size-2
 {
     font-size: 1.6666667rem;
     font-weight: 500;
-    line-height: 1.7777778rem;
+    line-height: $line-height;
 
-    margin-top: 1.7777778rem;
-    margin-bottom: 1.7777778rem;
+    margin-top: $line-height;
+    margin-bottom: $line-height;
 }
 h2
 {
@@ -29,29 +29,28 @@ h3,
 .is-size-3
 {
     font-size: 1.2777778rem;
-    line-height: 1.7777778rem;
-
-    margin-top: 1.7777778rem;
-    margin-bottom: 1.7777778rem;
+    line-height: $line-height;
+    font-weight: 400;
+    margin-top: $line-height;
+    margin-bottom: $line-height;
 }
 h4,
 .is-size-4
 {
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.7777778rem;
+    line-height: $line-height;
 
-    margin-top: 1.7777778rem;
-    margin-bottom: 1.7777778rem;
+    margin-top: $line-height;
+    margin-bottom: $line-height;
 }
 h5,
 .is-size-5
 {
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.7777778rem;
-
-    margin-top: 1.7777778rem;
+    line-height: $line-height;
+    margin-top: $line-height;
     margin-bottom: 0rem;
 }
 p,
@@ -64,7 +63,7 @@ blockquote
     font-weight: 300;
 
     margin-top: 0rem;
-    margin-bottom: 1.7777778rem;
+    margin-bottom: $line-height;
 }
 ul ul,
 ol ol,
@@ -79,4 +78,5 @@ ol ul
     font-size: .6rem;
     font-weight: 300;
     line-height: $line-height/2;
+    margin-bottom: 0;
 }

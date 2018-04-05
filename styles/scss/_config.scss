@@ -7,9 +7,16 @@ $breakpoint-tablet: 36rem;
 $breakpoint-laptop: 48em;
 $breakpoint-desktop: 64em;
 $breakpoint-wide-monitor: 80em;
-$line-height: 1.7777778rem;
+$line-height: 1.7778rem;
 $textcolor: #333;
 $textgray: #828282;
+
+
+
+
+
+
+
 
 @import 'layout'; // Gridelex - http://gridlex.devlint.fr/
 
@@ -39,13 +46,13 @@ body {
   }
 }
 
-@media screen and (min-width: 64em) {
+@media screen and (min-width: $breakpoint-desktop) {
   html {
     font-size: $basefontsize3;
   }
 }
 
-@media screen and (min-width: 80em) {
+@media screen and (min-width: $breakpoint-wide-monitor) {
   html {
     font-size: $basefontsize3;
   }
@@ -53,9 +60,9 @@ body {
 
 [class*=col-],
 [class*=col_],
-[class~=col] {
+[class~=col] { // corrected padding-bottom for gridlex fitting my vertical grid
   padding: 0 .5rem $line-height/2;
-  max-width: 100%;
+  max-width: 100%; 
 }
 
 .container {
@@ -65,18 +72,7 @@ body {
   outline-color: rgba(0, 0, 255, 0.5)
 }
 
-.center-text {
-  text-align: center;
-}
+.topoffset{ // this offsets the first item AFTER the fixed header
+  padding-top: $line-height * 3.5;
 
-.left-text {
-  text-align: left;
-}
-
-.right-text {
-  text-align: right;
-}
-
-.vertical-1 {
-  padding: 0.888889rem 0
 }

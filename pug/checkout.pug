@@ -13,36 +13,37 @@ head
   
 body.-borders.-labelling.-vertical-rhythm
 
-  include header.pug
+  include header-simple.pug
   
   section.checkout
     .container
       .grid-12
-        .col-8
-          h2 Get Instant Premium Access for $9
+        .col-4
+          h2 Instant Premium Access
+          //#val.alert.alert-info
           .grid-12.overline
-            .col-5
-              .book.view3d.size-mid.chunky.oclock-10
+            .col-12.productframe
+              .book.view3d.size-small.chunky.highview.oclock-11
                 .cover
                   img(src="https://raw.githubusercontent.com/sitepoint/Complete-Cover-Archive/New-UX-books/games1/9780994182616-Perfect-html5-games-small.png" alt="Book cover: HTML5 Games")
-            .col-7
-              h5 Premium Membership includes instant access to:
+            .col-12
+              h5 Including... 
               ul
-                li HTML5 Games: Novice to Ninja (PDF &amp; ePub)
-                li 70+ SitePoint Books
-                li 80+ Premium Video Courses
-              
+                li 70+ SitePoint Books (PDF &amp; ePUB)
+                li 80+ Premium Video Courses              
               .grid-12.priceline
-                .col-8
+                .col-4 
+                  | Total:
+                .col-4
                   span.price
                     strike $15 
-                .col-3
+                .col-4.text-center 
                   span.price
                     | $9
-              .col
+              .col.text-center
                 small Discount applied. Expires in 24 hours
-        .col-4
-          include checkout-form.pug
+        .col-8.dark
+          include checkout-new.pug
 
   include footer.pug
   include scripts.pug

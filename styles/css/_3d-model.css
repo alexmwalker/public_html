@@ -1,0 +1,361 @@
+/* ===  3D Renderer === */
+/* This CSS needs to be supported by javascript: 
+
+https://cdn.rawgit.com/alexmwalker/view3d/master/js/scripts.js
+
+...and a specific HTML structure
+
+
+
+*/
+.cover img {
+  max-width: none; }
+
+/*
+$aspect-ratio is either 7:9 (.76) or 8:10 (.8) ratio for all SitePoint books and shouldn't change unless the book format changes. */
+/* -- Spin speed -- */
+/* -- Preset Book Display Sizes -- */
+/* WIDTHS  */
+/* HEIGHTS  */
+/* SPINES  */
+/* CHUNKY SPINES */
+/* Calculate other book dimensions */
+.book.size-small {
+  height: 10rem;
+  width: 7.65027rem;
+  -webkit-perspective: 42.5rem;
+  perspective: 42.5rem; }
+  .book.size-small .backcover {
+    -webkit-transform: rotateY(180deg) translateZ(0.6rem);
+    transform: rotateY(180deg) translateZ(0.6rem); }
+    .book.size-small .backcover:before, .book.size-small .backcover:after {
+      width: 0.6rem; }
+
+.book.size-mid {
+  height: 20rem;
+  width: 15.30055rem;
+  -webkit-perspective: 85rem;
+  perspective: 85rem; }
+  .book.size-mid .backcover {
+    -webkit-transform: rotateY(180deg) translateZ(1.2rem);
+    transform: rotateY(180deg) translateZ(1.2rem); }
+    .book.size-mid .backcover:before, .book.size-mid .backcover:after {
+      width: 1.2rem; }
+
+.book.size-large {
+  height: 35rem;
+  width: 26.77596rem;
+  -webkit-perspective: 148.75rem;
+  perspective: 148.75rem; }
+  .book.size-large .backcover {
+    -webkit-transform: rotateY(180deg) translateZ(2.1rem);
+    transform: rotateY(180deg) translateZ(2.1rem); }
+    .book.size-large .backcover:before, .book.size-large .backcover:after {
+      width: 2.1rem; }
+
+.book.size-large.chunky .backcover {
+  -webkit-transform: rotateY(180deg) translateZ(3.15rem);
+  transform: rotateY(180deg) translateZ(3.15rem); }
+  .book.size-large.chunky .backcover:before, .book.size-large.chunky .backcover:after {
+    width: 3.15rem; }
+
+.book.size-small.chunky .backcover {
+  -webkit-transform: rotateY(180deg) translateZ(0.9rem);
+  transform: rotateY(180deg) translateZ(0.9rem); }
+  .book.size-small.chunky .backcover:before, .book.size-small.chunky .backcover:after {
+    width: 0.9rem; }
+
+.book.size-mid.chunky .backcover {
+  -webkit-transform: rotateY(180deg) translateZ(1.8rem);
+  transform: rotateY(180deg) translateZ(1.8rem); }
+  .book.size-mid.chunky .backcover:before, .book.size-mid.chunky .backcover:after {
+    width: 1.8rem; }
+
+.book {
+  margin: 2em;
+  position: relative;
+  -webkit-perspective-origin: 50% 50%;
+  perspective-origin: 50% 50%; }
+
+.highview {
+  -webkit-perspective-origin: 0% 0;
+  perspective-origin: 0% 0; }
+
+.lowview {
+  -webkit-perspective-origin: 100% 0;
+  perspective-origin: 100% 0; }
+
+.cover {
+  /* This is a mask to crop the IMG to only cover */
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  z-index: 1; }
+  .cover:after {
+    /* the reflection effect across the IMG cover */
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    background-image: -webkit-linear-gradient(350deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(0, 0, 0, 0.25) 50%, rgba(255, 255, 255, 0) 100%), none;
+    background-image: -o-linear-gradient(350deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(0, 0, 0, 0.25) 50%, rgba(255, 255, 255, 0) 100%), none;
+    background-image: linear-gradient(100deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(0, 0, 0, 0.25) 50%, rgba(255, 255, 255, 0) 100%), none;
+    background-size: 180% 200%;
+    background-position: 0% 100%;
+    background-repeat: repeat;
+    top: 0;
+    left: 0;
+    position: relative;
+    z-index: 12; }
+
+.book .cover {
+  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15), 3px 3px 4px rgba(0, 0, 0, 0.3), 6px 6px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15), 3px 3px 4px rgba(0, 0, 0, 0.3), 6px 6px 4px rgba(0, 0, 0, 0.1); }
+
+.view3d .cover {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  /* remove anchoring shadow in 3D view */ }
+
+.cover img {
+  float: right;
+  height: 100%; }
+
+.view3d .bookgroup {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transform: rotateY(0deg) rotateX(0deg);
+  transform: rotateY(0deg) rotateX(0deg);
+  height: 100%;
+  width: 100%;
+  position: relative;
+  -webkit-transition: -webkit-transform 1.5s ease-in;
+  transition: -webkit-transform 1.5s ease-in;
+  -o-transition: transform 1.5s ease-in;
+  transition: transform 1.5s ease-in;
+  transition: transform 1.5s ease-in, -webkit-transform 1.5s ease-in; }
+  .view3d .bookgroup:before, .view3d .bookgroup:after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    background: #eee;
+    top: 0%;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    width: 100%;
+    height: 6%;
+    -webkit-transform: rotateY(0deg) rotateX(-90deg) translateX(0px);
+    transform: rotateY(0deg) rotateX(-90deg) translateX(0px); }
+  .view3d .bookgroup:after {
+    top: 100%;
+    -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75), 2px 2px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75), 2px 2px 15px rgba(0, 0, 0, 0.5); }
+
+.backcover {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  height: 100%;
+  width: 100%;
+  background: red, red;
+  background-size: 500% 200%, auto 100%;
+  background-position: -200% 100%, left top;
+  position: absolute;
+  top: 0px;
+  z-index: -1;
+  right: 0px; }
+  .backcover:before, .backcover:after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #eee;
+    height: 100%;
+    -webkit-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+    -webkit-transform-origin: 0% 50%;
+    -ms-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+    z-index: 9; }
+  .backcover:after {
+    -webkit-transform: rotateY(90deg) translateZ(0px);
+    transform: rotateY(90deg) translateZ(0px);
+    left: 100%;
+    background-size: 500% 200%, auto 100%;
+    -webkit-transform-origin: 0% 50%;
+    -ms-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+    background: inherit;
+    background-position: center center; }
+
+/* =======  POSING CLASSES ========== */
+.oclock-12 .bookgroup {
+  -webkit-transform: rotateY(0deg) rotateX(0deg);
+  transform: rotateY(0deg) rotateX(0deg); }
+
+.oclock-1 .bookgroup {
+  -webkit-transform: rotateY(-30deg) rotateX(0deg);
+  transform: rotateY(-30deg) rotateX(0deg); }
+
+.oclock-2 .bookgroup {
+  -webkit-transform: rotateY(-60deg) rotateX(0deg);
+  transform: rotateY(-60deg) rotateX(0deg); }
+
+.oclock-3 .bookgroup {
+  -webkit-transform: rotateY(-90deg) rotateX(0deg);
+  transform: rotateY(-90deg) rotateX(0deg); }
+
+.oclock-4 .bookgroup {
+  -webkit-transform: rotateY(-120deg) rotateX(0deg);
+  transform: rotateY(-120deg) rotateX(0deg); }
+
+.oclock-5 .bookgroup {
+  -webkit-transform: rotateY(-150deg) rotateX(0deg);
+  transform: rotateY(-150deg) rotateX(0deg); }
+
+.oclock-6 .bookgroup {
+  -webkit-transform: rotateY(-180deg) rotateX(0deg);
+  transform: rotateY(-180deg) rotateX(0deg); }
+
+.oclock-7 .bookgroup {
+  -webkit-transform: rotateY(-210deg) rotateX(0deg);
+  transform: rotateY(-210deg) rotateX(0deg); }
+
+.oclock-8 .bookgroup {
+  -webkit-transform: rotateY(-240deg) rotateX(0deg);
+  transform: rotateY(-240deg) rotateX(0deg); }
+
+.oclock-9 .bookgroup {
+  -webkit-transform: rotateY(-263deg) rotateX(0deg);
+  transform: rotateY(-263deg) rotateX(0deg); }
+
+.oclock-10 .bookgroup {
+  -webkit-transform: rotateY(-300deg) rotateX(0deg);
+  transform: rotateY(-300deg) rotateX(0deg); }
+
+.oclock-11 .bookgroup {
+  -webkit-transform: rotateY(-330deg) rotateX(0deg);
+  transform: rotateY(-330deg) rotateX(0deg); }
+
+.hover:hover .bookgroup {
+  -webkit-transform: rotateY(30deg) scale(1.05);
+  transform: rotateY(30deg) scale(1.05);
+  -webkit-transition: -webkit-transform .35s ease-in-out;
+  transition: -webkit-transform .35s ease-in-out;
+  -o-transition: transform .35s ease-in-out;
+  transition: transform .35s ease-in-out;
+  transition: transform .35s ease-in-out, -webkit-transform .35s ease-in-out;
+  -webkit-animation: spin 12s infinite linear 0.35s;
+  animation: spin 12s infinite linear 0.35s; }
+  .hover:hover .bookgroup .backcover {
+    -webkit-animation: lightingeffect-back 12s infinite ease-in-out;
+    animation: lightingeffect-back 12s infinite ease-in-out; }
+  .hover:hover .bookgroup .cover:after {
+    -webkit-animation: lightingeffect-cover 12s infinite ease-in-out -6s;
+    animation: lightingeffect-cover 12s infinite ease-in-out -6s; }
+  .hover:hover .bookgroup .backcover:after {
+    -webkit-animation: lightingeffect-spine 12s infinite ease-in-out -3s;
+    animation: lightingeffect-spine 12s infinite ease-in-out -3s; }
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotateY(30deg) scale(1.05);
+    transform: rotateY(30deg) scale(1.05); }
+  100% {
+    -webkit-transform: rotateY(390deg) scale(1.05);
+    transform: rotateY(390deg) scale(1.05); } }
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotateY(30deg) scale(1.05);
+    transform: rotateY(30deg) scale(1.05); }
+  100% {
+    -webkit-transform: rotateY(390deg) scale(1.05);
+    transform: rotateY(390deg) scale(1.05); } }
+
+/* move the reflection/sheen layer across the surface */
+@-webkit-keyframes lightingeffect-back {
+  0% {
+    background-position: -200% 100%, left top; }
+  25% {
+    background-position: -200% 100%, left top; }
+  50% {
+    background-position: 0% 100%, left top; }
+  75% {
+    background-position: 200% 100%, left top; }
+  100% {
+    background-position: 200% 100%, left top; } }
+@keyframes lightingeffect-back {
+  0% {
+    background-position: -200% 100%, left top; }
+  25% {
+    background-position: -200% 100%, left top; }
+  50% {
+    background-position: 0% 100%, left top; }
+  75% {
+    background-position: 200% 100%, left top; }
+  100% {
+    background-position: 200% 100%, left top; } }
+
+@-webkit-keyframes lightingeffect-spine {
+  0% {
+    background-position: -200% 100%, center top; }
+  25% {
+    background-position: -200% 100%, center top; }
+  50% {
+    background-position: 0% 100%, center top; }
+  75% {
+    background-position: 200% 100%, center top; }
+  100% {
+    background-position: 200% 100%, center top; } }
+
+@keyframes lightingeffect-spine {
+  0% {
+    background-position: -200% 100%, center top; }
+  25% {
+    background-position: -200% 100%, center top; }
+  50% {
+    background-position: 0% 100%, center top; }
+  75% {
+    background-position: 200% 100%, center top; }
+  100% {
+    background-position: 200% 100%, center top; } }
+
+@-webkit-keyframes lightingeffect-cover {
+  0% {
+    background-position: -200% 100%, right top; }
+  25% {
+    background-position: -200% 100%, right top; }
+  50% {
+    background-position: 0% 100%, right top; }
+  75% {
+    background-position: 200% 100%, right top; }
+  100% {
+    background-position: 200% 100%, left top; } }
+
+@keyframes lightingeffect-cover {
+  0% {
+    background-position: -200% 100%, right top; }
+  25% {
+    background-position: -200% 100%, right top; }
+  50% {
+    background-position: 0% 100%, right top; }
+  75% {
+    background-position: 200% 100%, right top; }
+  100% {
+    background-position: 200% 100%, left top; } }
+
+/*# sourceMappingURL=_3d-model.css.map */

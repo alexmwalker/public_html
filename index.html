@@ -10,7 +10,7 @@
   <!-- Font-->
   <link rel="stylesheet" type="text/css" href="styles/css/base.css">
 </head>
-<body class="-borders -labelling -vertical-rhythm">
+<body class="borders -labelling vertical-rhythm">
   <!-- header.pug-->
   <header class="sitepoint">
     <div class="container">
@@ -69,7 +69,7 @@
               <li>452 Pages</li>
             </ul><a class="do" href="#openModal">Preview</a><a class="buy" href="https://www.sitepoint.com/premium/products/Z2lkOi8vbGVhcm5hYmxlL1Byb2R1Y3QvMTE5">Buy</a>
           </div>
-          <div class="book view3d size-mid oclock-1 hover"><a href="#openModal">
+          <div class="book view3d size-mid oclock-1 hover aspect8-10"><a href="#openModal">
               <div class="cover"><img src="https://raw.githubusercontent.com/sitepoint/Complete-Cover-Archive/New-UX-books/games1/9780994182616-Perfect-html5-games-small.png" alt="Book cover: HTML5 Games"></div></a></div>
         </div>
       </div>
@@ -107,36 +107,65 @@
   <section class="whoisthisfor">
     <div class="container">
       <div class="grid-12">
-        <div class="col-12">
-          <h2>Who should read this Book?</h2>
+        <h2 class="col-12">Who should read this Book?</h2>
+        <div class="col-3_sm-6"><img src="images/SVG/head4.svg">
+          <h3>Hardcore Gamers</h3>
+          <p>... ready to jump from 'game consumer' to 'game creator'.</p>
         </div>
-        <div class="col-3"><img src="https://cdn.rawgit.com/alexmwalker/Complete-Cover-Archive/23a9c2c3/misc/daphne.svg.svg">
-          <h4>Hardcore Gamers</h4>
-          <p>...ready to jump from 'game consumer' to 'game creator'.</p>
-        </div>
-        <div class="col-3"><img src="https://cdn.rawgit.com/alexmwalker/Complete-Cover-Archive/6a8d260d/misc/dan.svg.svg">
-          <h4>Web Developers</h4>
+        <div class="col-3_sm-6"><img src="images/SVG/head3.svg">
+          <h3>Web Developers</h3>
           <p>... itching to learn a different kind of development.</p>
         </div>
-        <div class="col-3"><img src="https://cdn.rawgit.com/alexmwalker/Complete-Cover-Archive/6a8d260d/misc/hector.svg.svg">
-          <h4>Writers &amp; Designers</h4>
+        <div class="col-3_sm-6"><img src="images/SVG/head11.svg">
+          <h3>Writers &amp; Designers</h3>
           <p>... who have lots of great ideas but need a platform to deliver them.</p>
         </div>
-        <div class="col-3"><img src="https://cdn.rawgit.com/alexmwalker/Complete-Cover-Archive/6a8d260d/misc/janice.svg.svg">
-          <h4>Anyone</h4>
-          <p>... who ever thought <em>'Gee, game designer looks like a super-cool job'.</em></p>
+        <div class="col-3_sm-6"><img src="images/SVG/head10.svg">
+          <h3>Anyone</h3>
+          <p>... who ever thought <em>'Gee, game designer looks like a super-fun job'.</em></p>
         </div>
+      </div>
+    </div>
+    <!-- there are 12 heads -->
+  </section>
+  <section class="readers-say">
+    <div class="container">
+      <div class="grid-spaceBetween">
+        <h2 class="col-12">What readers say</h2>
+        <dl class="col-5">
+          <dd>
+            <div class="rating-box"><i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+            </div>Very comprehensive. I have enjoyed the learning experience - well actually still in the learning process. The only thing I would have liked is a complete index reference.
+          </dd>
+          <dt class="avatar">Alex Lloyd<img src="https://s3.amazonaws.com/uifaces/faces/twitter/vista/128.jpg" alt="Peter"></dt>
+        </dl>
+        <dl class="col-5">
+          <dd>
+            <div class="rating-box"><i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+            </div>If you are interested in game development in JavaScript, then this book is a must-read.
+          </dd>
+          <dt class="avatar">Peter Gwynn<img src="https://s3.amazonaws.com/uifaces/faces/twitter/tonypeterson/128.jpg" alt="Peter"></dt>
+        </dl>
+        <div class="col-12"></div>
       </div>
     </div>
   </section>
   <section class="whatyoulllearn">
     <div class="container">
       <div class="grid-12">
-        <div class="col-8">
+        <div class="col-7">
           <h2>What You'll Learn</h2>
           <div class="grid-12">
-            <div class="col-6 image"><img src="images/image24.jpg"></div>
-            <div class="col-6 blurb">
+            <div class="col-6_sm-12 image"><img src="images/image24.jpg"></div>
+            <div class="col-6_sm-12 blurb">
               <h5>Chapter 6</h5>
               <h4>Optimizing Web Fonts for Performance: the State of the Art</h4>
               <p>
@@ -144,8 +173,8 @@
                 not working, and some well-tested.
               </p>
             </div>
-            <div class="col-6 image"><img src="images/image27.jpg"></div>
-            <div class="col-6 blurb">
+            <div class="col-6_sm-12 image"><img src="images/image27.jpg"></div>
+            <div class="col-6_sm-12 blurb">
               <h5>Chapter 7</h5>
               <h4>What Is a CDN (and How Does It Work)?</h4>
               <p>
@@ -153,8 +182,8 @@
                 are Content Delivery Networks, what do they do exactly?
               </p>
             </div>
-            <div class="col-6 image"><img src="images/image28.jpg"></div>
-            <div class="col-6 blurb">
+            <div class="col-6_sm-12 image"><img src="images/image28.jpg"></div>
+            <div class="col-6_sm-12 blurb">
               <h5>Chapter 10</h5>
               <h4>Build a Notification Systems</h4>
               <p>
@@ -164,24 +193,19 @@
             </div>
           </div>
         </div>
-        <div class="col-4">
-          <h2>Feedback
-            <div class="review">
-              <div class="rating-box"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div>
-              <p>Earle is a very entertaining writer and this book sets useful, fun goals and delivers them in attainable ways. Sure, there's some JavaScript to learn, but it should be within the grasp of most practical-minded people.</p>
-              <p class="avatar">Sally K.<img src="https://d3iw72m71ie81c.cloudfront.net/female-52.jpg"></p>
-            </div>
-            <div class="review">
-              <div class="rating-box"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
-              <p>Very useful, a good blend of theory and practical information.</p>
-              <p class="avatar">Brad. F.<img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg"></p>
-            </div>
-            <div class="review">
-              <div class="rating-box"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
-              <p>Definitely a good read, form design is as important as the information that you intend to collect.</p>
-              <p class="avatar">Jina.<img src="https://s3.amazonaws.com/uifaces/faces/twitter/jina/128.jpg"></p>
-            </div>
-          </h2>
+        <div class="col-5">
+          <div class="specs-unit">
+            <div class="book view3d size-mid chunky oclock-12 hover aspect8-10"><a href="#openModal">
+                <div class="cover"><img src="https://raw.githubusercontent.com/sitepoint/Complete-Cover-Archive/New-UX-books/games1/9780994182616-Perfect-html5-games-small.png" alt="Book cover: HTML5 Games"></div></a></div>
+            <ul class="specs">
+              <li><a class="buy" href="https://www.sitepoint.com/premium/products/Z2lkOi8vbGVhcm5hYmxlL1Byb2R1Y3QvMTE5">Get this Book</a></li>
+              <li class="icon"><i class="far fa-calendar-alt"></i> Last Updated: Jan 2018</li>
+              <li class="icon specs-video"><i class="far fa-file"></i> 452 pages</li>
+              <li class="icon specs-length"><i class="fas fa-list-ol"></i> 14 Chapters</li>
+              <li class="icon specs-projects"><i class="fas fa-folder-open"></i> Real World Projects</li>
+              <li class="icon specs-students"><i class="fas fa-users"></i> 13,547 Readers</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -189,7 +213,7 @@
   <section class="authors">
     <div class="container">
       <div class="grid-center grid-middle">
-        <div class="col-1"><i class="fas fa-2x fa-chevron-circle-left"></i></div>
+        <div class="col-1 text-center"><i class="fas fa-2x fa-chevron-circle-left"></i></div>
         <div class="col-5">
           <h2>Your Author</h2>
           <h4>Earle Castledine</h4>
@@ -209,7 +233,7 @@
             <li><i class="fab fa-github"></i><a href="https://github.com/mrspeaker">Github</a></li>
           </ul>
         </div>
-        <div class="col-1"><i class="fas fa-2x fa-chevron-circle-right"></i></div>
+        <div class="col-1 text-center"><i class="fas fa-2x fa-chevron-circle-right"></i></div>
       </div>
     </div>
   </section>
@@ -367,14 +391,20 @@
           </table>
         </div>
         <div class="col-5">
-          <ul class="specs">
-            <li><a class="buy" href="https://www.sitepoint.com/premium/products/Z2lkOi8vbGVhcm5hYmxlL1Byb2R1Y3QvMTE5">Get this Book</a></li>
-            <li class="icon"><i class="far fa-calendar-alt"></i> Last Updated: Jan 2018</li>
-            <li class="icon specs-video"><i class="far fa-file"></i> 452 pages</li>
-            <li class="icon specs-length"><i class="fas fa-list-ol"></i> 14 Chapters</li>
-            <li class="icon specs-projects"><i class="fas fa-folder-open"></i> Real World Projects</li>
-            <li class="icon specs-students"><i class="fas fa-users"></i> 13,547 Readers      </li>
-          </ul>
+          <div class="specs-unit">
+            <!-- .book.view3d.size-mid.oclock-12.aspect8-10.hover-->
+            <!--  a(href="#openModal")-->
+            <!--    .cover-->
+            <!--      img(src="https://raw.githubusercontent.com/sitepoint/Complete-Cover-Archive/New-UX-books/games1/9780994182616-Perfect-html5-games-small.png" alt="Book cover: HTML5 Games")-->
+            <ul class="specs">
+              <li><a class="buy" href="https://www.sitepoint.com/premium/products/Z2lkOi8vbGVhcm5hYmxlL1Byb2R1Y3QvMTE5">Get this Book</a></li>
+              <li class="icon"><i class="far fa-calendar-alt"></i> Last Updated: Jan 2018</li>
+              <li class="icon specs-video"><i class="far fa-file"></i> 452 pages</li>
+              <li class="icon specs-length"><i class="fas fa-list-ol"></i> 14 Chapters</li>
+              <li class="icon specs-projects"><i class="fas fa-folder-open"></i> Real World Projects</li>
+              <li class="icon specs-students"><i class="fas fa-users"></i> 13,547 Readers</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -491,32 +521,56 @@
   </div>
   <script src="https://cdn.rawgit.com/alexmwalker/view3d/master/js/scripts.js"></script>
   <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css"></script>
+  <script src="js/hopscotch.js"></script>
   <script>
-    var scrollpos = window.scrollY;
-    var grabProduct = document.querySelector('div#pinit');
-    var bookMatch = document.querySelector('div.book');
-    function add_class_on_scroll() {
-    grabProduct.classList.add("pin-it");
-    bookMatch.classList.add("oclock-spin");
-    bookMatch.classList.remove("oclock-1");
-    bookMatch.classList.remove("size-mid");
-    bookMatch.classList.add("size-small");
-    }
-    function remove_class_on_scroll() {
-    grabProduct.classList.remove("pin-it");
-    bookMatch.classList.add("oclock-1");
-    bookMatch.classList.remove("oclock-spin");
-    bookMatch.classList.remove("size-small");
-    bookMatch.classList.add("size-mid");
-    }
-    window.addEventListener('scroll', function () {
-    scrollpos = window.scrollY;
-    if (scrollpos > 220) {
-    add_class_on_scroll();
-    } else {
-    remove_class_on_scroll();
-    }
-    //console.log(scrollpos);
+    /*  === remembering the last book visited === */
+    
+    /* set it */
+    $('#set').click(function() { // when you click #set...
+      var test = $('#text').val();  // grab the value of input#text (a hidden INPUT value)
+      localStorage.setItem("lastSeen", test); // and write it into a cookie called 'lastSeen'
     });
+    
+    
+    
+    
+    
+    
+    /* get it */
+    $('#get').click(function() {
+      $('#val').text(localStorage.getItem("lastSeen"));
+    });
+    
+    /* remove it */
+    $('#remove').click(function() {
+      localStorage.removeItem("lastSeen");
+    });
+    
+    $('#val').text(localStorage.getItem("lastSeen"));
+    
+    
+    // Define the tour!
+      var tour = {
+        id: "library-tour",
+        steps: [
+          {
+            title: "My Header",
+            content: "This is the header of my page.",
+            target: "header",
+            placement: "right"
+          },
+          {
+            title: "My content",
+            content: "Here is where I put my content.",
+            target: document.querySelector("#content p"),
+            placement: "bottom"
+          }
+        ]
+      };
+    
+      // Start the tour!
+      hopscotch.startTour(library-tour);
   </script>
 </body>

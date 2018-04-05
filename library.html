@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Styles - Styles </title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="stylesheet" type="test/css" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.6.1/gridlex.min.css">
+  <!-- The Grid system-->
+  <link rel="stylesheet" type="test/css" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,600,700">
+  <!-- Font-->
+  <link rel="stylesheet" type="text/css" href="styles/css/base.css">
+</head>
+<body class="-borders -labelling -vertical-rhythm">
+  <!-- header.pug-->
+  <header class="sitepoint">
+    <div class="container">
+      <div class="grid-12">
+        <div class="col-3">
+          <div class="branding"> <i class="fas fa-bars hamburger"></i><img class="branding-logo" src="https://cdn.rawgit.com/alexmwalker/038d08ab767b9fa0ae765b00d7f41622/raw/b3b34065187c08d94c85c5417030e2d881085c8a/sp-logo.svg"></div>
+        </div>
+        <div class="col-6"></div>
+        <div class="col-3">
+          <div class="dash-controls right-text"><i class="fas fa-tachometer-alt"></i> Dashboard</div>
+        </div>
+      </div>
+    </div>
+    <nav class="main">
+      <div class="container">
+        <div class="grid">
+          <div class="col">
+            <ul class="navbar">
+              <li><a href="#">Books<span class="note">1</span></a></li>
+              <li><a href="#">Courses</a></li>
+              <li><a href="#">Learning Paths</a></li>
+              <li><a href="#">Deals<span class="note">3</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!--include library-title.pug-->
+  <div class="container gallery">
+    <div class="grid-12">
+      <div class="col-3"> <a class="do smallbutton" id="set" href="#openModal">Set</a>
+        <input id="text" name="save" type="hidden" value="https://raw.githubusercontent.com/sitepoint/Complete-Cover-Archive/New-UX-books/games1/9780994182616-Perfect-html5-games-small.png"><a class="buy smallbutton" href="http://storage.internal.melbourne.sitepoint.com/~awalker/checkout.html">Buy</a>
+        <div class="book view3d size-small chunky oclock-12 hover"> x<a href="#openModal">
+            <div class="cover"><img src="https://raw.githubusercontent.com/sitepoint/Complete-Cover-Archive/New-UX-books/games1/9780994182616-Perfect-html5-games-small.png" alt="Book cover: HTML5 Games"></div></a></div>
+      </div>
+      <div class="col-3"> <a class="do smallbutton" href="#openModal">Set</a>
+        <input id="text" name="save" type="hidden" value="https://raw.githubusercontent.com/alexmwalker/Complete-Cover-Archive/master/adobexd1/adobexd1.png"><a class="buy smallbutton" href="http://storage.internal.melbourne.sitepoint.com/~awalker/checkout.html">Buy</a>
+        <div class="book view3d size-small oclock-12 hover"><a href="#openModal">
+            <div class="cover"><img src="https://raw.githubusercontent.com/alexmwalker/Complete-Cover-Archive/master/adobexd1/adobexd1.png" alt="Book cover: HTML5 Games"></div></a></div>
+      </div>
+      <div class="col-3"> <a class="do smallbutton" href="#openModal">Preview</a><a class="buy smallbutton" href="http://storage.internal.melbourne.sitepoint.com/~awalker/checkout.html">Buy</a>
+        <div class="book view3d size-small oclock-12 hover"><a href="#openModal">
+            <div class="cover"><img src="https://raw.githubusercontent.com/alexmwalker/Complete-Cover-Archive/master/cssmaster1/cssmaster1.jpg" alt="Book cover: HTML5 Games"></div></a></div>
+      </div>
+      <div class="col-3"> <a class="do smallbutton" href="#openModal">Preview</a><a class="buy smallbutton" href="http://storage.internal.melbourne.sitepoint.com/~awalker/checkout.html">Buy</a>
+        <div class="book view3d size-small oclock-12 hover"><a href="#openModal">
+            <div class="cover"><img src="https://raw.githubusercontent.com/alexmwalker/Complete-Cover-Archive/master/foundation1/foundation1.png" alt="Book cover: HTML5 Games"></div></a></div>
+      </div>
+      <div class="col-3"> <a class="do smallbutton" href="#openModal">Preview</a><a class="buy smallbutton" href="http://storage.internal.melbourne.sitepoint.com/~awalker/checkout.html">Buy</a>
+        <div class="book view3d size-small oclock-12 hover"><a href="#openModal">
+            <div class="cover"><img src="https://raw.githubusercontent.com/alexmwalker/Complete-Cover-Archive/master/sass1/sass1-mock-hires.png" alt="Book cover: HTML5 Games"></div></a></div>
+      </div>
+      <div class="col-3"> <a class="do smallbutton" href="#openModal">Preview</a><a class="buy smallbutton" href="http://storage.internal.melbourne.sitepoint.com/~awalker/checkout.html">Buy</a>
+        <div class="book view3d size-small oclock-12 hover"><a href="#openModal">
+            <div class="cover"><img src="https://raw.githubusercontent.com/alexmwalker/Complete-Cover-Archive/master/jsnovice2/jsnovice2.png" alt="Book cover: HTML5 Games"></div></a></div>
+      </div>
+      <div class="col-3">  <a class="do smallbutton" href="#openModal">Preview</a><a class="buy smallbutton" href="http://storage.internal.melbourne.sitepoint.com/~awalker/checkout.html">Buy</a>
+        <div class="book view3d size-small oclock-12 hover"><a href="#openModal">
+            <div class="cover"><img src="https://raw.githubusercontent.com/sitepoint/Complete-Cover-Archive/master/sketch1/sketch1.jpg" alt="Book cover: HTML5 Games"></div></a></div>
+      </div>
+      <div class="col-3"> <a class="do smallbutton" href="#openModal">Preview</a><a class="buy smallbutton" href="http://storage.internal.melbourne.sitepoint.com/~awalker/checkout.html">Buy</a>
+        <div class="book view3d size-small oclock-12 hover"><a href="#openModal">
+            <div class="cover"><img src="https://raw.githubusercontent.com/sitepoint/Complete-Cover-Archive/master/php6/php6.jpg" alt="Book cover: HTML5 Games"></div></a></div>
+      </div>
+    </div>
+  </div>
+  <div class="container control">
+    <div class="grid">
+      <div class="col"></div>
+      <div class="alert alert-info" id="val"><i>nothing saved...</i></div>
+      <button class="btn btn-success" id="get">get saved value</button>
+      <button class="btn btn-danger" id="remove">clear the value</button>
+    </div>
+  </div>
+  <!-- footer-->
+  <footer class="mainfooter">
+    <div class="container">
+      <div class="grid">
+        <div class="col">Stuff We Do
+          <ul>
+            <li class="l-ml3 f-c-grey-300 l-mb2 Footer-points"><a class="Footer-link f-small" href="/">SitePoint Home</a></li>
+            <li class="l-ml3 f-c-grey-300 l-mb2"><a class="Footer-link f-small" href="/versioning/">Versioning</a></li>
+            <li class="l-ml3 f-c-grey-300 l-mb2"><a class="Footer-link f-small" href="/themes/">Themes</a></li>
+            <li class="l-ml3 f-c-grey-300 l-mb2"><a class="Footer-link f-small" href="/community/">Forums</a></li>
+            <li class="l-ml3 f-c-grey-300 l-mb2"><a class="Footer-link f-small" href="/html-css/css/">References</a></li>
+          </ul>
+        </div>
+        <div class="col">About
+          <ul>
+            <li class="l-ml3 f-c-grey-300 l-mb2"><a class="Footer-link f-small" href="/about-us/">Our Story</a></li>
+            <li class="l-ml3 f-c-grey-300 l-mb2"><a class="Footer-link f-small" href="/press/">Press Room</a></li>
+          </ul>
+        </div>
+        <div class="col">Contact
+          <ul>
+            <li class="l-ml3 f-c-grey-300 l-mb2"><a class="Footer-link f-small" href="/contact-us/">Contact Us</a></li>
+            <li class="l-ml3 f-c-grey-300 l-mb2"><a class="Footer-link f-small" href="https://sitepoint.zendesk.com/hc/en-us">FAQ</a></li>
+            <li class="l-ml3 f-c-grey-300 l-mb2"><a class="Footer-link f-small" href="/write-for-us/">Write for Us</a></li>
+            <li class="l-ml3 f-c-grey-300 l-mb2"><a class="Footer-link f-small" href="/advertise/">Advertise</a></li>
+          </ul>
+        </div>
+        <div class="col">Legals
+          <ul>
+            <li class="l-ml3 f-c-grey-300 l-mb2"><a class="Footer-link f-small" href="/premium/legals">Terms of Use</a></li>
+            <li class="l-ml3 f-c-grey-300 l-mb2"><a class="Footer-link f-small" href="/premium/privacy-policy">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.rawgit.com/alexmwalker/view3d/master/js/scripts.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css"></script>
+  <script src="js/hopscotch.js"></script>
+  <script>
+    var scrollpos = window.scrollY;
+    var grabProduct = document.querySelector('div#pinit');
+    var bookMatch = document.querySelector('div.book');
+    function add_class_on_scroll() {
+    grabProduct.classList.add("pin-it");
+    bookMatch.classList.add("oclock-spin");
+    bookMatch.classList.remove("oclock-1");
+    bookMatch.classList.remove("size-mid");
+    bookMatch.classList.add("size-small");
+    }
+    function remove_class_on_scroll() {
+    grabProduct.classList.remove("pin-it");
+    bookMatch.classList.add("oclock-1");
+    bookMatch.classList.remove("oclock-spin");
+    bookMatch.classList.remove("size-small");
+    bookMatch.classList.add("size-mid");
+    }
+    window.addEventListener('scroll', function () {
+    scrollpos = window.scrollY;
+    if (scrollpos > 220) {
+    add_class_on_scroll();
+    } else {
+    remove_class_on_scroll();
+    }
+    //console.log(scrollpos);
+    });
+    
+    /*  === remembering the last book visited === */
+    
+    /* set it */
+    $('#set').click(function() { // when you click #set...
+      var test = $('#text').val();  // grab the value of input#text (a hidden INPUT value)
+      localStorage.setItem("lastSeen", test); // and write it into a cookie called 'lastSeen'
+    });
+    
+    
+    
+    
+    
+    
+    /* get it */
+    $('#get').click(function() {
+      $('#val').text(localStorage.getItem("lastSeen"));
+    });
+    
+    /* remove it */
+    $('#remove').click(function() {
+      localStorage.removeItem("lastSeen");
+    });
+    
+    $('#val').text(localStorage.getItem("lastSeen"));
+    
+    
+    // Define the tour!
+      var tour = {
+        id: "library-tour",
+        steps: [
+          {
+            title: "My Header",
+            content: "This is the header of my page.",
+            target: "header",
+            placement: "right"
+          },
+          {
+            title: "My content",
+            content: "Here is where I put my content.",
+            target: document.querySelector("#content p"),
+            placement: "bottom"
+          }
+        ]
+      };
+    
+      // Start the tour!
+      hopscotch.startTour(library-tour);
+  </script>
+</body>
