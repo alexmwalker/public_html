@@ -2065,7 +2065,7 @@ footer.mainfooter {
 /* ===  3D Renderer === */
 /* This CSS needs to be supported by javascript: 
 
-https://cdn.rawgit.com/alexmwalker/view3d/master/js/scripts.js
+https://cdn.jsdelivr.net/gh/alexmwalker/view3d@master/js/scripts.js
 
 ...and a specific HTML structure
 
